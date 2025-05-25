@@ -1,0 +1,15 @@
+name: Action with Email Step
+on: [push, workflow_dispatch]  # Triggers on push or manual run
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Step with email 23f3003476@ds.study.iitm.ac.in
+        run: echo "This step contains my email address!"
+
+      - name: Final step
+        run: echo "Action completed!"
